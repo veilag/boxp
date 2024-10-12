@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import {Command} from "commander"
 import {add} from "./commands/add.js";
+import {init} from "./commands/init.js";
 
 async function main() {
     const program = new Command()
@@ -11,7 +12,7 @@ async function main() {
             "-v, --version",
             "display the version number")
 
-    program.addCommand(add)
+    program.addCommand(init).addCommand(add)
     program.parse()
 }
 

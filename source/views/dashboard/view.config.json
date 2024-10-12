@@ -1,3 +1,10 @@
 {
-
+  "name": "dashboard",
+  "dependencies": [
+    {
+      "type": "component",
+      "name": "button",
+      "library": "viewkit"
+    }
+  ]
 }
