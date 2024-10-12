@@ -1,0 +1,29 @@
+{
+  "name": "view-kit",
+  "version": "1.0.0",
+  "description": "Reusable view components",
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "veilag",
+  "bin": {
+    "viewkit": "./src/index.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veilag/view-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/veilag/view-kit/issues"
+  },
+  "homepage": "https://github.com/veilag/view-kit#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "inquirer": "^12.0.0"
+  }
+}
