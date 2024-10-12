@@ -3,12 +3,15 @@ import fs from "fs";
 import {select, input} from "@inquirer/prompts";
 import chalk from "chalk";
 import {clearConsole, printTitle} from "../utils/log.js";
+import path from "path";
 
 export const init = new Command()
     .name("init")
     .description("initialize view-kit in you're app")
     .action(async () => {
-        if (fs.existsSync(process.cwd() + '/view.kit.json')) {
+        const configPath = path.join(process.cwd(), 'view.kit.json')
+
+        if (fs.existsSync(configPath)) {
             clearConsole()
 
             const answer = await input({
@@ -25,7 +28,7 @@ export const init = new Command()
         printTitle("just like design constructor, but for developers")
         const config = await promptConfig()
 
-        fs.writeFile(process.cwd() + '/view.kit.json', JSON.stringify(config, null, 2), (err) => {
+        fs.writeFile(configPath, JSON.stringify(config, null, 2), (err) => {
             if (err) {
                 console.error('Error while creating config file:', err);
             } else {
