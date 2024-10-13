@@ -29,7 +29,7 @@ function installPackages(packages) {
     const spinner = ora("Installing packages")
     spinner.start()
 
-    exec(`npm install ${packagesAsArgument}`, (error, stdout, stderr) => {
+    exec(`npm install ${packagesAsArgument}`, (error) => {
         if (error) {
             spinner.fail()
             console.error(`Error installing preset: ${error.message}`);
