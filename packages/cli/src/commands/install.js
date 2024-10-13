@@ -1,8 +1,6 @@
 import {Command} from "commander";
-import {exec} from "node:child_process";
 import chalk from "chalk";
-import {getPresets} from "../utils.js";
-import ora from "ora";
+import {getPresets, installPackages} from "../utils.js";
 
 export const install = new Command()
     .name("install")
@@ -19,24 +17,5 @@ export const install = new Command()
             console.log(chalk.gray("There is no packages in given preset"))
             return
         }
-
         installPackages(packages)
     })
-
-function installPackages(packages) {
-    const packagesAsArgument = packages.join(" ")
-
-    const spinner = ora("Installing packages")
-    spinner.start()
-
-    exec(`npm install ${packagesAsArgument}`, (error) => {
-        if (error) {
-            spinner.fail()
-            console.error(`Error installing preset: ${error.message}`);
-            return;
-        }
-
-        spinner.succeed()
-        console.log(chalk.green("✔"), `Preset installed`)
-    })
-}
