@@ -1,26 +1,23 @@
 {
-  "name": "view-kit",
+  "name": "boxp",
   "version": "1.0.0",
-  "description": "Reusable view components",
+  "description": "You're way to preset packages",
   "main": "./src/index.js",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "veilag",
   "bin": {
-    "viewkit": "./src/index.js"
+    "boxp": "./src/index.js"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/veilag/view-kit.git"
+    "url": "git+https://github.com/veilag/boxp.git"
   },
   "bugs": {
-    "url": "https://github.com/veilag/view-kit/issues"
+    "url": "https://github.com/veilag/boxpissues"
   },
-  "homepage": "https://github.com/veilag/view-kit#readme",
+  "homepage": "https://github.com/veilag/boxp#readme",
   "dependencies": {
     "axios": "^1.7.7",
     "chalk": "^5.3.0",
